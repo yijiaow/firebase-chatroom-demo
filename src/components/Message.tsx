@@ -1,3 +1,5 @@
+import { formatDate } from '../utils/formatDate';
+
 interface MessageProps {
   content: string;
   createdAt: { seconds: number } | null;
@@ -26,7 +28,7 @@ const Message: React.FC<MessageProps> = ({
         {displayName && <p className="text-primary-500">User: {displayName}</p>}
         {createdAt && (
           <span className="text-gray-500 text-xs">
-            {new Date(createdAt.seconds * 1000).toString()}
+            {formatDate(new Date(createdAt.seconds * 1000))}
           </span>
         )}
         <p>{content}</p>
