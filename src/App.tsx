@@ -9,7 +9,7 @@ import {
 import { AuthContext, AuthProvider } from './contexts/AuthContext';
 import Home from './components/Home';
 import SignIn from './components/SignIn';
-import SignUp from './components/SignUp';
+import ConfirmEmailLink from './components/ConfirmEmailLink';
 
 const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
   const { user } = useContext(AuthContext);
@@ -31,6 +31,7 @@ function App() {
         <PrivateRoute exact path="/" component={Home} />
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
+        <Route path="/confirm-email" component={ConfirmEmailLink} />
       </Router>
     </AuthProvider>
   );
