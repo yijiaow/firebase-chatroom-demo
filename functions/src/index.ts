@@ -1,11 +1,31 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
-const nodemailer = require('nodemailer');
-const cors = require('cors')({ origin: true });
+const serviceAccount = require('../firechat-service-account.json');
+import * as functions from 'firebase-functions';
+import * as admin from 'firebase-admin';
+import * as nodemailer from 'nodemailer';
+import * as cors from 'cors';
 
-admin.initializeApp();
+const corsHandler = cors({ origin: true });
+
+admin.initializeApp({ credential: admin.credential.cert(serviceAccount) });
 
 const config = functions.config();
+
+const generateToken = async (userId: string, channelId: string) => {
+  const additionalClaims = { channelId };
+
+  return await admin.auth().createCustomToken(userId, additionalClaims);
+};
+
+// const generateEmailLink = async (email: string, channelId: string) => {
+//   const actionCodeSettings = {
+//     url: `http://localhost:3000/channels/${channelId}`,
+//     handleCodeInApp: true,
+//   };
+
+//   return await admin
+//     .auth()
+//     .generateSignInWithEmailLink(email, actionCodeSettings);
+// };
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -15,29 +35,45 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export const sendMail = functions.https.onRequest(
-  async (req: any, res: any) => {
-    cors(req, res, () => {
-      const dest = req.body.dest;
-      const { sender, channel } = req.body;
+const sendOneMail = async (
+  dest: string,
+  sender: { email: string; name: string },
+  channel: { id: string; name: string }
+) => {
+  const token = await generateToken(dest, channel.id);
 
-      const mailOptions = {
-        from: `${sender.name} <${sender.email}>`,
-        to: dest,
-        subject: "I'M A PICKLE!",
-        html: `<p>Your friend ${sender.name} from FireChat has invited you to join ${channel.name}.
+  const mailOptions = {
+    from: `${sender.name} <${sender.email}>`,
+    to: dest,
+    subject: "I'M A PICKLE!",
+    html: `<p>Your friend ${sender.name} from FireChat has invited you to join ${channel.name}.
           Click the link below to chat!</p>
           <br />
-          <a href="http://localhost:3000/channels/${channel.id}">http://localhost:3000/channel/${channel.id}</a>`,
-      };
+          <a href="http://localhost:3000/channels/${channel.id}?token=${token}">http://localhost:3000/channel/${channel.id}</a>`,
+  };
 
-      return transporter.sendMail(mailOptions, (err: any, info: any) => {
-        if (err) {
-          return res.send(err.toString());
-        }
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(mailOptions, (err, info) => {
+      if (err) return reject(err);
 
-        return res.send('Email sent');
-      });
+      resolve(info);
     });
-  }
-);
+  });
+};
+
+export const sendMails = functions.https.onRequest((req, res) => {
+  corsHandler(req, res, async () => {
+    const { invites, sender, channel } = req.body;
+
+    try {
+      await Promise.all(
+        invites.map(async (dest: string) => {
+          await sendOneMail(dest, sender, channel);
+        })
+      );
+      res.status(200).send('Invites sent');
+    } catch (err) {
+      res.status(500).send(err);
+    }
+  });
+});
