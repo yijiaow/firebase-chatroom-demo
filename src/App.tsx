@@ -18,7 +18,16 @@ const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
     <Route
       {...rest}
       render={(routeProps) =>
-        user ? <RouteComponent {...routeProps} /> : <Redirect to="/signin" />
+        user ? (
+          <RouteComponent {...routeProps} />
+        ) : (
+          <Redirect
+            to={{
+              pathname: '/signin',
+              state: { referrer: routeProps.location.pathname },
+            }}
+          />
+        )
       }
     ></Route>
   );
