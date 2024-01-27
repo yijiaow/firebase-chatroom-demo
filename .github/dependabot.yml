@@ -1,0 +1,15 @@
+updates:
+  - package-ecosystem: "yarn"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    target-branch: "security-updates"
+    versioning-strategy: "increase"
+    commit-message:
+      prefix: "chore"
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
+    labels:
+      - "dependencies"
+      - "vulnerabilities"
