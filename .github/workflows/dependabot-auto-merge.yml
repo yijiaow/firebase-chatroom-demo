@@ -1,6 +1,9 @@
 name: Dependabot Auto Approve & Merge
 
-on: pull_request_target
+on: 
+  pull_request_target:
+    types: [assigned, opened, synchronize, reopened]
+    branches: ['master', 'security-updates']
 
 permissions:
   pull-requests: write
