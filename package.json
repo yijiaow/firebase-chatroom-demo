@@ -6,7 +6,7 @@
     "@craco/craco": "^6.3.0",
     "@emotion/react": "^11",
     "@heroicons/react": "^1.0.5",
-    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/jest-dom": "^6.3.0",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "date-fns": "^2.24.0",
