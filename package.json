@@ -57,6 +57,6 @@
     "autoprefixer": "^9",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "typescript": "^4.4.3"
+    "typescript": "^5.3.3"
   }
 }
