@@ -999,14 +999,7 @@
     "@babel/helper-plugin-utils" "^7.22.5"
     "@babel/plugin-syntax-flow" "^7.23.3"
 
-"@babel/plugin-transform-for-of@^7.12.1", "@babel/plugin-transform-for-of@^7.12.13":
-  version "7.12.13"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-for-of/-/plugin-transform-for-of-7.12.13.tgz#561ff6d74d9e1c8879cb12dbaf4a14cd29d15cf6"
-  integrity sha512-xCbdgSzXYmHGyVX3+BsQjcd4hv4vA/FDy7Kc8eOpzKmBBPEOTurt0w5fCRQaGl+GSBORKgJdstQ1rHl4jbNseQ==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.12.13"
-
-"@babel/plugin-transform-for-of@^7.23.6":
+"@babel/plugin-transform-for-of@^7.12.1", "@babel/plugin-transform-for-of@^7.12.13", "@babel/plugin-transform-for-of@^7.23.6":
   version "7.23.6"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-for-of/-/plugin-transform-for-of-7.23.6.tgz#81c37e24171b37b370ba6aaffa7ac86bcb46f94e"
   integrity sha512-aYH4ytZ0qSuBbpfhuofbg/e96oQ7U2w1Aw/UQmKT+1l39uEhUPoFS3fHevDc1G0OvewyDudfMKY1OulczHzWIw==
