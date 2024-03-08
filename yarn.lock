@@ -259,13 +259,6 @@
   dependencies:
     "@babel/types" "^7.22.5"
 
-"@babel/helper-member-expression-to-functions@^7.12.13":
-  version "7.12.17"
-  resolved "https://registry.yarnpkg.com/@babel/helper-member-expression-to-functions/-/helper-member-expression-to-functions-7.12.17.tgz#f82838eb06e1235307b6d71457b6670ff71ee5ac"
-  integrity sha512-Bzv4p3ODgS/qpBE0DiJ9qf5WxSmrQ8gVTe8ClMfwwsY2x/rhykxxy3bXzG7AGTnPB2ij37zGJ/Q/6FruxHxsxg==
-  dependencies:
-    "@babel/types" "^7.12.17"
-
 "@babel/helper-member-expression-to-functions@^7.22.15", "@babel/helper-member-expression-to-functions@^7.23.0":
   version "7.23.0"
   resolved "https://registry.yarnpkg.com/@babel/helper-member-expression-to-functions/-/helper-member-expression-to-functions-7.23.0.tgz#9263e88cc5e41d39ec18c9a3e0eced59a3e7d366"
@@ -313,13 +306,6 @@
     "@babel/helper-split-export-declaration" "^7.22.6"
     "@babel/helper-validator-identifier" "^7.22.20"
 
-"@babel/helper-optimise-call-expression@^7.12.13":
-  version "7.12.13"
-  resolved "https://registry.yarnpkg.com/@babel/helper-optimise-call-expression/-/helper-optimise-call-expression-7.12.13.tgz#5c02d171b4c8615b1e7163f888c1c81c30a2aaea"
-  integrity sha512-BdWQhoVJkp6nVjB7nkFWcn43dkprYauqtk++Py2eaf/GRDFm5BxRqEIZCiHlZUGAVmtwKcsVL1dC68WmzeFmiA==
-  dependencies:
-    "@babel/types" "^7.12.13"
-
 "@babel/helper-optimise-call-expression@^7.22.5":
   version "7.22.5"
   resolved "https://registry.yarnpkg.com/@babel/helper-optimise-call-expression/-/helper-optimise-call-expression-7.22.5.tgz#f21531a9ccbff644fdd156b4077c16ff0c3f609e"
@@ -351,17 +337,7 @@
     "@babel/helper-environment-visitor" "^7.22.20"
     "@babel/helper-wrap-function" "^7.22.20"
 
-"@babel/helper-replace-supers@^7.12.13":
-  version "7.12.13"
-  resolved "https://registry.yarnpkg.com/@babel/helper-replace-supers/-/helper-replace-supers-7.12.13.tgz#00ec4fb6862546bd3d0aff9aac56074277173121"
-  integrity sha512-pctAOIAMVStI2TMLhozPKbf5yTEXc0OJa0eENheb4w09SrgOWEs+P4nTOZYJQCqs8JlErGLDPDJTiGIp3ygbLg==
-  dependencies:
-    "@babel/helper-member-expression-to-functions" "^7.12.13"
-    "@babel/helper-optimise-call-expression" "^7.12.13"
-    "@babel/traverse" "^7.12.13"
-    "@babel/types" "^7.12.13"
-
-"@babel/helper-replace-supers@^7.22.20":
+"@babel/helper-replace-supers@^7.12.13", "@babel/helper-replace-supers@^7.22.20":
   version "7.22.20"
   resolved "https://registry.yarnpkg.com/@babel/helper-replace-supers/-/helper-replace-supers-7.22.20.tgz#e37d367123ca98fe455a9887734ed2e16eb7a793"
   integrity sha512-qsW0In3dbwQUbK8kejJ4R7IHVGwHJlV6lpG6UA7a9hSa2YEiAib+N1T2kr6PEeUT+Fl7najmSOS6SmAwCHK6Tw==
@@ -1694,7 +1670,7 @@
     "@babel/parser" "^7.23.9"
     "@babel/types" "^7.23.9"
 
-"@babel/traverse@^7.1.0", "@babel/traverse@^7.1.6", "@babel/traverse@^7.12.1", "@babel/traverse@^7.12.11", "@babel/traverse@^7.12.13", "@babel/traverse@^7.12.17", "@babel/traverse@^7.12.9", "@babel/traverse@^7.13.0", "@babel/traverse@^7.23.9", "@babel/traverse@^7.7.0":
+"@babel/traverse@^7.1.0", "@babel/traverse@^7.1.6", "@babel/traverse@^7.12.1", "@babel/traverse@^7.12.11", "@babel/traverse@^7.12.17", "@babel/traverse@^7.12.9", "@babel/traverse@^7.13.0", "@babel/traverse@^7.23.9", "@babel/traverse@^7.7.0":
   version "7.24.0"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.24.0.tgz#4a408fbf364ff73135c714a2ab46a5eab2831b1e"
   integrity sha512-HfuJlI8qq3dEDmNU5ChzzpZRWq+oxCZQyMzIMEqLho+AQnhMnKQUzH6ydo3RBl/YjPCuk68Y6s0Gx0AeyULiWw==
