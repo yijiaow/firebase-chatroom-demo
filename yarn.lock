@@ -1349,15 +1349,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.22.15"
     "@babel/helper-plugin-utils" "^7.22.5"
 
-"@babel/plugin-transform-unicode-regex@^7.12.13":
-  version "7.12.13"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-unicode-regex/-/plugin-transform-unicode-regex-7.12.13.tgz#b52521685804e155b1202e83fc188d34bb70f5ac"
-  integrity sha512-mDRzSNY7/zopwisPZ5kM9XKCfhchqIYwAKRERtEnhYscZB79VRekuRSoYbN0+KVe3y8+q1h6A4svXtP7N+UoCA==
-  dependencies:
-    "@babel/helper-create-regexp-features-plugin" "^7.12.13"
-    "@babel/helper-plugin-utils" "^7.12.13"
-
-"@babel/plugin-transform-unicode-regex@^7.23.3":
+"@babel/plugin-transform-unicode-regex@^7.12.13", "@babel/plugin-transform-unicode-regex@^7.23.3":
   version "7.23.3"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-unicode-regex/-/plugin-transform-unicode-regex-7.23.3.tgz#26897708d8f42654ca4ce1b73e96140fbad879dc"
   integrity sha512-wMHpNA4x2cIA32b/ci3AfwNgheiva2W0WUKWTK7vBHBhDKfPsc5cFGNWm69WBqpwd86u1qwZ9PWevKqm1A3yAw==
