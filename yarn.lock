@@ -1004,16 +1004,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.22.5"
 
-"@babel/plugin-transform-modules-amd@^7.12.13":
-  version "7.12.13"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-amd/-/plugin-transform-modules-amd-7.12.13.tgz#43db16249b274ee2e551e2422090aa1c47692d56"
-  integrity sha512-JHLOU0o81m5UqG0Ulz/fPC68/v+UTuGTWaZBUwpEk1fYQ1D9LfKV6MPn4ttJKqRo5Lm460fkzjLTL4EHvCprvA==
-  dependencies:
-    "@babel/helper-module-transforms" "^7.12.13"
-    "@babel/helper-plugin-utils" "^7.12.13"
-    babel-plugin-dynamic-import-node "^2.3.3"
-
-"@babel/plugin-transform-modules-amd@^7.23.3":
+"@babel/plugin-transform-modules-amd@^7.12.13", "@babel/plugin-transform-modules-amd@^7.23.3":
   version "7.23.3"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-amd/-/plugin-transform-modules-amd-7.23.3.tgz#e19b55436a1416829df0a1afc495deedfae17f7d"
   integrity sha512-vJYQGxeKM4t8hYCKVBlZX/gtIY2I7mRGFNcm85sgXGMTBcoV3QdVtdpbcWEbzbfUIUZKwvgFT82mRvaQIebZzw==
